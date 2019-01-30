@@ -2,14 +2,11 @@
 
 git add *
 
-git add README.md
-
 git commit -m "first commit"
 
 git push -u origin master
 
-
-sudo apt-get install libncurses5-dev zlib1g-dev gawk flex patch git-core g++ subversion
+sudo apt-get install libncurses5-dev zlib1g-dev gawk flex patch git-core g++ subversion //安装编译依赖
 
 ./scripts/feeds update -a  //更新软件包
 
