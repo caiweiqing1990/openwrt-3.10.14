@@ -1,0 +1,22 @@
+Source-Makefile: package/ramips/drivers/mt7603e/Makefile
+Package: kmod-mt7603e
+Menu: 1
+Submenu: Drivers
+Version: <LINUX_VERSION>+p4rev-112670-
+Depends: 
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: MTK Properties
+Title: MTK MT7603e wifi AP driver
+Maintainer: 
+Source: mt7603e-p4rev-112670.tar.bz2
+Type: ipkg
+Description: MTK MT7603e wifi AP driver
+
+@@
+Config:
+	source "package/ramips/drivers/mt7603e/config.in"
+@@
+
+

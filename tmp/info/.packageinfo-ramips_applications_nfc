@@ -1,0 +1,18 @@
+Source-Makefile: package/ramips/applications/nfc/Makefile
+Package: nfc
+Submenu: Applications
+Version: 1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +libpthread +librt
+Menu-Depends: 
+Provides: 
+Section: MTK Properties
+Category: MTK Properties
+Title: NFC service deamon
+Maintainer: 
+Source: 
+Type: ipkg
+Description:   An program to config nfc service deamon.
+
+@@
+
+

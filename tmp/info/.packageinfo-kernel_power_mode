@@ -1,0 +1,18 @@
+Source-Makefile: package/kernel/power_mode/Makefile
+Package: kmod-power_mode
+Submenu: Other modules
+Version: <LINUX_VERSION>-1
+Depends: 
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: Kernel modules
+Title: power_mode
+Maintainer: 
+Source: 
+Type: ipkg
+Description:  This is a power_mode drivers
+
+@@
+
+

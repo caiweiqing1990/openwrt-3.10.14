@@ -1,0 +1,18 @@
+Source-Makefile: package/ramips/applications/gpio/Makefile
+Package: gpio
+Submenu: Applications
+Version: 1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread 
+Menu-Depends: 
+Provides: 
+Section: MTK Properties
+Category: MTK Properties
+Title: Command to config gpio
+Maintainer: 
+Source: 
+Type: ipkg
+Description:   An program to config gpio.
+
+@@
+
+

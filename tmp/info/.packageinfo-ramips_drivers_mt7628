@@ -1,0 +1,22 @@
+Source-Makefile: package/ramips/drivers/mt7628/Makefile
+Package: kmod-mt7628
+Menu: 1
+Submenu: Drivers
+Version: <LINUX_VERSION>+p4rev-120395-
+Depends: @TARGET_ramips_mt7628
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: MTK Properties
+Title: MTK MT7628 wifi AP driver
+Maintainer: 
+Source: mt7628-p4rev-120395.tar.bz2
+Type: ipkg
+Description: MTK MT7628 wifi AP driver
+
+@@
+Config:
+	source "package/ramips/drivers/mt7628/config.in"
+@@
+
+

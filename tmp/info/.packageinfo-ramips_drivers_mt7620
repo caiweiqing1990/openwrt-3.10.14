@@ -1,0 +1,22 @@
+Source-Makefile: package/ramips/drivers/mt7620/Makefile
+Package: kmod-mt7620
+Menu: 1
+Submenu: Drivers
+Version: <LINUX_VERSION>+p4rev-120998-
+Depends: @TARGET_ramips_mt7620
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: MTK Properties
+Title: MTK MT7620 wifi AP driver
+Maintainer: 
+Source: mt7620-p4rev-120998.tar.bz2
+Type: ipkg
+Description: MTK MT7620 wifi AP driver
+
+@@
+Config:
+	source "package/ramips/drivers/mt7620/config.in"
+@@
+
+

@@ -1,0 +1,18 @@
+Source-Makefile: package/kernel/leds_driver/Makefile
+Package: kmod-leds_driver
+Submenu: Other modules
+Version: <LINUX_VERSION>-1
+Depends: 
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: Kernel modules
+Title: Motor driver
+Maintainer: 
+Source: 
+Type: ipkg
+Description:  This is a leds_driver drivers
+
+@@
+
+

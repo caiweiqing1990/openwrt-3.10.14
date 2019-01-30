@@ -1,0 +1,18 @@
+Source-Makefile: package/ramips/applications/reg/Makefile
+Package: reg
+Submenu: Applications
+Version: 1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +kmod-rdm
+Menu-Depends: 
+Provides: 
+Section: MTK Properties
+Category: MTK Properties
+Title: Read/Write registers from user space
+Maintainer: 
+Source: 
+Type: ipkg
+Description:   An program to read/write ralink register.
+
+@@
+
+

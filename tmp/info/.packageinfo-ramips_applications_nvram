@@ -1,0 +1,38 @@
+Source-Makefile: package/ramips/applications/nvram/Makefile
+Package: libnvram
+Submenu: Libraries
+Version: 1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @TARGET_ramips
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: MTK Properties
+Title: MTK nvram library
+Maintainer: 
+Source: 
+Type: ipkg
+Description:   MTK nvram library
+
+@@
+
+Package: nvram
+Menu: 1
+Submenu: Applications
+Version: 1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @TARGET_ramips +libnvram
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: MTK Properties
+Title: MTK nvram tool
+Maintainer: 
+Source: 
+Type: ipkg
+Description:   MTK nvram tool
+
+@@
+Config:
+	source "package/ramips/applications/nvram/config.in"
+@@
+
+

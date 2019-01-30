@@ -1,0 +1,18 @@
+Source-Makefile: package/ramips/applications/hwnat/Makefile
+Package: hwnat
+Submenu: Applications
+Version: 4200
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @PACKAGE_kmod-hw_nat
+Menu-Depends: 
+Provides: 
+Section: MTK Properties
+Category: MTK Properties
+Title: Hardware NAT command
+Maintainer: 
+Source: 
+Type: ipkg
+Description:   An program to query info from hwnat driver
+
+@@
+
+

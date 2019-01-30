@@ -1,0 +1,18 @@
+Source-Makefile: package/kernel/ralink_pcm/Makefile
+Package: kmod-ralink_pcm
+Submenu: Other modules
+Version: <LINUX_VERSION>-1
+Depends: +kmod-ralink_gdma
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: Kernel modules
+Title: Motor driver
+Maintainer: 
+Source: 
+Type: ipkg
+Description:  This is a ralink_pcm drivers
+
+@@
+
+

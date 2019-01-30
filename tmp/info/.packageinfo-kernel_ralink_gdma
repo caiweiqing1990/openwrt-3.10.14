@@ -1,0 +1,18 @@
+Source-Makefile: package/kernel/ralink_gdma/Makefile
+Package: kmod-ralink_gdma
+Submenu: Other modules
+Version: <LINUX_VERSION>-1
+Depends: 
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: Kernel modules
+Title: Motor driver
+Maintainer: 
+Source: 
+Type: ipkg
+Description:  This is a ralink_gdma drivers
+
+@@
+
+

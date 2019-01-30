@@ -1,0 +1,22 @@
+Source-Makefile: package/ramips/drivers/mt7610e/Makefile
+Package: kmod-mt7610e
+Menu: 1
+Submenu: Drivers
+Version: <LINUX_VERSION>+p4rev-118062-
+Depends: 
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: MTK Properties
+Title: MTK MT7610e wifi AP driver
+Maintainer: 
+Source: mt7610e-p4rev-118062.tar.bz2
+Type: ipkg
+Description: MTK MT7610e wifi AP driver
+
+@@
+Config:
+	source "package/ramips/drivers/mt7610e/config.in"
+@@
+
+

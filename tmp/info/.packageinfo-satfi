@@ -1,0 +1,18 @@
+Source-Makefile: package/satfi/Makefile
+Package: satfi
+Version: 1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread libpthread libspeex libspeexdsp
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Cjb -- Inmabeidou Chuanjiabao Service
+Maintainer: 
+Source: 
+Type: ipkg
+Description: 	if you can't figure out this program does,you're probably
+	brain-dead and need immediate medical attention.
+
+@@
+
+

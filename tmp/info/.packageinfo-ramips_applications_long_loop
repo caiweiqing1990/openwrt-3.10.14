@@ -1,0 +1,18 @@
+Source-Makefile: package/ramips/applications/long_loop/Makefile
+Package: longloopd
+Submenu: Applications
+Version: 1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread 
+Menu-Depends: 
+Provides: 
+Section: MTK Properties
+Category: MTK Properties
+Title: Daemon to monitor switch link for long distance(>100m)
+Maintainer: 
+Source: 
+Type: ipkg
+Description:   Daemon to monitor switch link for long distance(>100m)
+
+@@
+
+

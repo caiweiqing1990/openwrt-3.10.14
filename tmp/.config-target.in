@@ -1,0 +1,413 @@
+choice
+	prompt "Target System"
+	default TARGET_ar71xx
+	reset if !DEVEL
+	
+config TARGET_ramips
+	bool "MTK/Ralink APSoC"
+	select HAS_SUBTARGETS
+	select mipsel
+	help
+	  Build firmware images for MTK/Ralink APSoC based boards.
+
+
+endchoice
+
+choice
+	prompt "Subtarget" if HAS_SUBTARGETS
+
+config TARGET_ramips_mt7620
+	bool "MT7620 based boards"
+	select LINUX_3_10
+	depends on TARGET_ramips
+	select GPIO_SUPPORT
+	select PCI_SUPPORT
+	select USES_SQUASHFS
+	select USB_SUPPORT
+	select mipsel
+	help
+	  Build firmware images for MTK/Ralink APSoC based boards.
+
+
+config TARGET_ramips_mt7621
+	bool "MT7621 based boards"
+	select LINUX_3_10
+	depends on TARGET_ramips
+	select GPIO_SUPPORT
+	select PCI_SUPPORT
+	select USES_SQUASHFS
+	select USB_SUPPORT
+	select mipsel
+	help
+	  Build firmware images for MTK/Ralink APSoC based boards.
+
+
+config TARGET_ramips_mt7628
+	bool "MT7628 based boards"
+	select LINUX_3_10
+	depends on TARGET_ramips
+	select GPIO_SUPPORT
+	select PCI_SUPPORT
+	select USES_SQUASHFS
+	select USB_SUPPORT
+	select mipsel
+	help
+	  Build firmware images for MTK/Ralink APSoC based boards.
+
+
+endchoice
+
+choice
+	prompt "Target Profile"
+
+config TARGET_ramips_mt7620_MT7620
+	bool "Default Profile"
+	depends on TARGET_ramips_mt7620
+	
+
+	select DEFAULT_8021xd
+	select DEFAULT_ated
+	select DEFAULT_base-files
+	select DEFAULT_block-mount
+	select DEFAULT_btnd
+	select DEFAULT_busybox
+	select DEFAULT_dnsmasq
+	select DEFAULT_dropbear
+	select DEFAULT_eth_mac
+	select DEFAULT_ethstt
+	select DEFAULT_firewall
+	select DEFAULT_fstools
+	select DEFAULT_gpio
+	select DEFAULT_hwnat
+	select DEFAULT_ip6tables
+	select DEFAULT_iptables
+	select DEFAULT_kmod-fs-ntfs
+	select DEFAULT_kmod-fs-vfat
+	select DEFAULT_kmod-ipt-nathelper
+	select DEFAULT_kmod-nls-base
+	select DEFAULT_kmod-nls-cp437
+	select DEFAULT_kmod-nls-cp850
+	select DEFAULT_kmod-nls-cp936
+	select DEFAULT_kmod-nls-cp950
+	select DEFAULT_kmod-nls-iso8859-1
+	select DEFAULT_kmod-nls-iso8859-15
+	select DEFAULT_kmod-nls-utf8
+	select DEFAULT_kmod-ohci
+	select DEFAULT_kmod-scsi-generic
+	select DEFAULT_kmod-usb-core
+	select DEFAULT_kmod-usb-storage
+	select DEFAULT_kmod-usb2
+	select DEFAULT_libc
+	select DEFAULT_libgcc
+	select DEFAULT_mii_mgr
+	select DEFAULT_mtd
+	select DEFAULT_netifd
+	select DEFAULT_odhcp6c
+	select DEFAULT_odhcpd
+	select DEFAULT_opkg
+	select DEFAULT_ppp
+	select DEFAULT_ppp-mod-pppoe
+	select DEFAULT_reg
+	select DEFAULT_switch
+	select DEFAULT_uci
+	select DEFAULT_uci2dat
+	select DEFAULT_watchdog
+	select DEFAULT_wireless-tools
+
+config TARGET_ramips_mt7621_MT7621
+	bool "Default Profile"
+	depends on TARGET_ramips_mt7621
+	
+
+	select DEFAULT_8021xd
+	select DEFAULT_ated
+	select DEFAULT_base-files
+	select DEFAULT_block-mount
+	select DEFAULT_btnd
+	select DEFAULT_busybox
+	select DEFAULT_dnsmasq
+	select DEFAULT_dropbear
+	select DEFAULT_eth_mac
+	select DEFAULT_ethstt
+	select DEFAULT_firewall
+	select DEFAULT_fstools
+	select DEFAULT_gpio
+	select DEFAULT_hwnat
+	select DEFAULT_ip6tables
+	select DEFAULT_iptables
+	select DEFAULT_kmod-fs-ntfs
+	select DEFAULT_kmod-fs-vfat
+	select DEFAULT_kmod-ipt-nathelper
+	select DEFAULT_kmod-nls-base
+	select DEFAULT_kmod-nls-cp437
+	select DEFAULT_kmod-nls-cp850
+	select DEFAULT_kmod-nls-cp936
+	select DEFAULT_kmod-nls-cp950
+	select DEFAULT_kmod-nls-iso8859-1
+	select DEFAULT_kmod-nls-iso8859-15
+	select DEFAULT_kmod-nls-utf8
+	select DEFAULT_kmod-scsi-generic
+	select DEFAULT_kmod-usb-core
+	select DEFAULT_kmod-usb-storage
+	select DEFAULT_kmod-usb3
+	select DEFAULT_libc
+	select DEFAULT_libgcc
+	select DEFAULT_mii_mgr
+	select DEFAULT_mtd
+	select DEFAULT_netifd
+	select DEFAULT_odhcp6c
+	select DEFAULT_odhcpd
+	select DEFAULT_opkg
+	select DEFAULT_ppp
+	select DEFAULT_ppp-mod-pppoe
+	select DEFAULT_reg
+	select DEFAULT_switch
+	select DEFAULT_uci
+	select DEFAULT_uci2dat
+	select DEFAULT_watchdog
+	select DEFAULT_wireless-tools
+	help
+	  Default package set compatible with most boards.
+
+config TARGET_ramips_mt7628_MT7628
+	bool "MT7628 Default"
+	depends on TARGET_ramips_mt7628
+	
+
+	select DEFAULT_8021xd
+	select DEFAULT_ated
+	select DEFAULT_base-files
+	select DEFAULT_block-mount
+	select DEFAULT_btnd
+	select DEFAULT_busybox
+	select DEFAULT_dnsmasq
+	select DEFAULT_dropbear
+	select DEFAULT_eth_mac
+	select DEFAULT_ethstt
+	select DEFAULT_firewall
+	select DEFAULT_fstools
+	select DEFAULT_gpio
+	select DEFAULT_ip6tables
+	select DEFAULT_iptables
+	select DEFAULT_kmod-fs-ntfs
+	select DEFAULT_kmod-fs-vfat
+	select DEFAULT_kmod-ipt-nathelper
+	select DEFAULT_kmod-nls-base
+	select DEFAULT_kmod-nls-cp437
+	select DEFAULT_kmod-nls-cp850
+	select DEFAULT_kmod-nls-cp936
+	select DEFAULT_kmod-nls-cp950
+	select DEFAULT_kmod-nls-iso8859-1
+	select DEFAULT_kmod-nls-iso8859-15
+	select DEFAULT_kmod-nls-utf8
+	select DEFAULT_kmod-scsi-generic
+	select DEFAULT_kmod-usb-core
+	select DEFAULT_kmod-usb-ohci
+	select DEFAULT_kmod-usb-storage
+	select DEFAULT_kmod-usb2
+	select DEFAULT_libc
+	select DEFAULT_libgcc
+	select DEFAULT_mii_mgr
+	select DEFAULT_mtd
+	select DEFAULT_netifd
+	select DEFAULT_odhcp6c
+	select DEFAULT_odhcpd
+	select DEFAULT_opkg
+	select DEFAULT_ppp
+	select DEFAULT_ppp-mod-pppoe
+	select DEFAULT_reg
+	select DEFAULT_switch
+	select DEFAULT_uci
+	select DEFAULT_uci2dat
+	select DEFAULT_watchdog
+	select DEFAULT_wireless-tools
+	select DEFAULT_xl2tpd
+	help
+	  Basic MT7628 SoC support
+
+endchoice
+
+config HAS_SUBTARGETS
+	bool
+
+config TARGET_BOARD
+	string
+
+		default "ramips" if TARGET_ramips
+config TARGET_ARCH_PACKAGES
+	string
+	
+		default "ramips_24kec" if TARGET_ramips_mt7620
+		default "ramips_24kec" if TARGET_ramips_mt7621
+		default "ramips_24kec" if TARGET_ramips_mt7628
+
+config DEFAULT_TARGET_OPTIMIZATION
+	string
+	default "-Os -pipe -mno-branch-likely -mips32r2 -mtune=24kec -mdsp" if TARGET_ramips_mt7620
+	default "-Os -pipe -mno-branch-likely -mips32r2 -mtune=24kec -mdsp" if TARGET_ramips_mt7621
+	default "-Os -pipe -mno-branch-likely -mips32r2 -mtune=24kec -mdsp" if TARGET_ramips_mt7628
+	default "-Os -pipe -funit-at-a-time"
+
+config CPU_TYPE
+	string
+	default "24kec+dsp" if TARGET_ramips_mt7620
+	default "24kec+dsp" if TARGET_ramips_mt7621
+	default "24kec+dsp" if TARGET_ramips_mt7628
+	default ""
+
+config LINUX_3_10
+	bool
+
+	config DEFAULT_8021xd
+		bool
+
+	config DEFAULT_ated
+		bool
+
+	config DEFAULT_base-files
+		bool
+
+	config DEFAULT_block-mount
+		bool
+
+	config DEFAULT_btnd
+		bool
+
+	config DEFAULT_busybox
+		bool
+
+	config DEFAULT_dnsmasq
+		bool
+
+	config DEFAULT_dropbear
+		bool
+
+	config DEFAULT_eth_mac
+		bool
+
+	config DEFAULT_ethstt
+		bool
+
+	config DEFAULT_firewall
+		bool
+
+	config DEFAULT_fstools
+		bool
+
+	config DEFAULT_gpio
+		bool
+
+	config DEFAULT_hwnat
+		bool
+
+	config DEFAULT_ip6tables
+		bool
+
+	config DEFAULT_iptables
+		bool
+
+	config DEFAULT_kmod-fs-ntfs
+		bool
+
+	config DEFAULT_kmod-fs-vfat
+		bool
+
+	config DEFAULT_kmod-ipt-nathelper
+		bool
+
+	config DEFAULT_kmod-nls-base
+		bool
+
+	config DEFAULT_kmod-nls-cp437
+		bool
+
+	config DEFAULT_kmod-nls-cp850
+		bool
+
+	config DEFAULT_kmod-nls-cp936
+		bool
+
+	config DEFAULT_kmod-nls-cp950
+		bool
+
+	config DEFAULT_kmod-nls-iso8859-1
+		bool
+
+	config DEFAULT_kmod-nls-iso8859-15
+		bool
+
+	config DEFAULT_kmod-nls-utf8
+		bool
+
+	config DEFAULT_kmod-ohci
+		bool
+
+	config DEFAULT_kmod-scsi-generic
+		bool
+
+	config DEFAULT_kmod-usb-core
+		bool
+
+	config DEFAULT_kmod-usb-ohci
+		bool
+
+	config DEFAULT_kmod-usb-storage
+		bool
+
+	config DEFAULT_kmod-usb2
+		bool
+
+	config DEFAULT_kmod-usb3
+		bool
+
+	config DEFAULT_libc
+		bool
+
+	config DEFAULT_libgcc
+		bool
+
+	config DEFAULT_mii_mgr
+		bool
+
+	config DEFAULT_mtd
+		bool
+
+	config DEFAULT_netifd
+		bool
+
+	config DEFAULT_odhcp6c
+		bool
+
+	config DEFAULT_odhcpd
+		bool
+
+	config DEFAULT_opkg
+		bool
+
+	config DEFAULT_ppp
+		bool
+
+	config DEFAULT_ppp-mod-pppoe
+		bool
+
+	config DEFAULT_reg
+		bool
+
+	config DEFAULT_switch
+		bool
+
+	config DEFAULT_uci
+		bool
+
+	config DEFAULT_uci2dat
+		bool
+
+	config DEFAULT_watchdog
+		bool
+
+	config DEFAULT_wireless-tools
+		bool
+
+	config DEFAULT_xl2tpd
+		bool
+

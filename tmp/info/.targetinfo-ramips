@@ -1,0 +1,100 @@
+Source-Makefile: target/linux/ramips/Makefile
+Target: ramips
+Target-Board: ramips
+Target-Name: MTK/Ralink APSoC
+Target-Path: /home/book/work/openwrt-3.10.14
+Target-Arch: mipsel
+Target-Arch-Packages: ramips
+Target-Features: gpio squashfs
+Target-Depends: 
+Target-Optimization: -Os -pipe -mno-branch-likely -mips32 -mtune=mips32
+CPU-Type: mips32
+Linux-Version: 3.10.14-p112871
+Linux-Release: 1
+Linux-Kernel-Arch: mips
+Target-Description:
+	Build firmware images for MTK/Ralink APSoC based boards.
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg netifd fstools dnsmasq iptables ip6tables ppp ppp-mod-pppoe kmod-ipt-nathelper firewall odhcpd odhcp6c  
+Target: ramips/mt7620
+Target-Board: ramips
+Target-Name: MT7620 based boards
+Target-Path: target/linux/ramips
+Target-Arch: mipsel
+Target-Arch-Packages: ramips_24kec
+Target-Features: gpio pci squashfs usb
+Target-Depends: 
+Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kec -mdsp
+CPU-Type: 24kec+dsp
+Linux-Version: 3.10.14-p112871
+Linux-Release: 1
+Linux-Kernel-Arch: mips
+Target-Description:
+	Build firmware images for MTK/Ralink APSoC based boards.
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg netifd fstools  dnsmasq iptables ip6tables ppp ppp-mod-pppoe kmod-ipt-nathelper firewall odhcpd odhcp6c  
+Target-Profile: MT7620
+Target-Profile-Name: Default Profile
+Target-Profile-Packages: -swconfig -rt2x00 ated hwnat reg gpio btnd switch ethstt uci2dat mii_mgr watchdog 8021xd eth_mac wireless-tools block-mount fstools kmod-scsi-generic kmod-usb-core kmod-ohci kmod-usb2 kmod-usb-storage kmod-fs-vfat kmod-fs-ntfs kmod-nls-base kmod-nls-utf8 kmod-nls-cp936 kmod-nls-cp437 kmod-nls-cp850 kmod-nls-iso8859-1 kmod-nls-iso8859-15 kmod-nls-cp950 
+Target-Profile-Config: 
+
+@@
+Target-Profile-Description:
+
+@@
+
+Target: ramips/mt7621
+Target-Board: ramips
+Target-Name: MT7621 based boards
+Target-Path: target/linux/ramips
+Target-Arch: mipsel
+Target-Arch-Packages: ramips_24kec
+Target-Features: gpio pci squashfs usb
+Target-Depends: 
+Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kec -mdsp
+CPU-Type: 24kec+dsp
+Linux-Version: 3.10.14-p112871
+Linux-Release: 1
+Linux-Kernel-Arch: mips
+Target-Description:
+	Build firmware images for MTK/Ralink APSoC based boards.
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg netifd fstools  dnsmasq iptables ip6tables ppp ppp-mod-pppoe kmod-ipt-nathelper firewall odhcpd odhcp6c  
+Target-Profile: MT7621
+Target-Profile-Name: Default Profile
+Target-Profile-Packages: -swconfig -rt2x00 ated hwnat reg gpio btnd switch ethstt uci2dat mii_mgr watchdog 8021xd eth_mac wireless-tools block-mount fstools kmod-scsi-generic kmod-usb-core kmod-usb3 kmod-usb-storage kmod-fs-vfat kmod-fs-ntfs kmod-nls-base kmod-nls-utf8 kmod-nls-cp936 kmod-nls-cp437 kmod-nls-cp850 kmod-nls-iso8859-1 kmod-nls-iso8859-15 kmod-nls-cp950 
+Target-Profile-Config: 
+
+@@
+Target-Profile-Description:
+	Default package set compatible with most boards.
+@@
+
+Target: ramips/mt7628
+Target-Board: ramips
+Target-Name: MT7628 based boards
+Target-Path: target/linux/ramips
+Target-Arch: mipsel
+Target-Arch-Packages: ramips_24kec
+Target-Features: gpio pci squashfs usb
+Target-Depends: 
+Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kec -mdsp
+CPU-Type: 24kec+dsp
+Linux-Version: 3.10.14-p112871
+Linux-Release: 1
+Linux-Kernel-Arch: mips
+Target-Description:
+	Build firmware images for MTK/Ralink APSoC based boards.
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg netifd fstools  dnsmasq iptables ip6tables ppp ppp-mod-pppoe kmod-ipt-nathelper firewall odhcpd odhcp6c  
+Target-Profile: MT7628
+Target-Profile-Name: MT7628 Default
+Target-Profile-Packages: -swconfig -rt2x00 ated reg gpio btnd switch ethstt uci2dat mii_mgr watchdog 8021xd eth_mac wireless-tools xl2tpd block-mount fstools kmod-scsi-generic kmod-usb-core kmod-usb-ohci kmod-usb2 kmod-usb-storage kmod-fs-vfat kmod-fs-ntfs kmod-nls-base kmod-nls-utf8 kmod-nls-cp936 kmod-nls-cp437 kmod-nls-cp850 kmod-nls-iso8859-1 kmod-nls-iso8859-15 kmod-nls-cp950 
+Target-Profile-Config: 
+
+@@
+Target-Profile-Description:
+	Basic MT7628 SoC support
+@@
+
+

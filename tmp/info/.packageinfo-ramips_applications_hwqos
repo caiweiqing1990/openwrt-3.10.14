@@ -1,0 +1,18 @@
+Source-Makefile: package/ramips/applications/hwqos/Makefile
+Package: hwqos
+Submenu: Applications
+Version: 4210
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @PACKAGE_kmod-hw_nat @TARGET_ramips_mt7621 +libnvram
+Menu-Depends: 
+Provides: 
+Section: MTK Properties
+Category: MTK Properties
+Title: Hardware QoS command
+Maintainer: 
+Source: 
+Type: ipkg
+Description:   A program to work with driver
+
+@@
+
+

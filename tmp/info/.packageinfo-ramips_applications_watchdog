@@ -1,0 +1,18 @@
+Source-Makefile: package/ramips/applications/watchdog/Makefile
+Package: watchdog
+Submenu: Applications
+Version: 1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +kmod-hw_wdg
+Menu-Depends: 
+Provides: 
+Section: MTK Properties
+Category: MTK Properties
+Title: MTK APSoC Watchdog Daemon
+Maintainer: 
+Source: 
+Type: ipkg
+Description:   MTK APSoC Watchdog Daemon
+
+@@
+
+

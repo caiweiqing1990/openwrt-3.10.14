@@ -1,0 +1,22 @@
+Source-Makefile: package/ramips/drivers/exfat-nofuse/Makefile
+Package: kmod-exfat-nofuse
+Menu: 1
+Submenu: Drivers
+Version: <LINUX_VERSION>+2014-11-25-PKG_SOURCE_VERSION
+Depends: +kmod-nls-base
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: MTK Properties
+Title: MS exFAT support
+Maintainer: Hua Shao <hua.shao@mediatek.com>
+Source: exfat-nofuse-2014-11-25.tar.gz
+Type: ipkg
+Description: MS exFAT support
+Hua Shao <hua.shao@mediatek.com>
+@@
+Config:
+	source "package/ramips/drivers/exfat-nofuse/config.in"
+@@
+
+

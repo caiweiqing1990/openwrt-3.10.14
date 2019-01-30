@@ -1,0 +1,22 @@
+Source-Makefile: package/ramips/drivers/mt76x2e/Makefile
+Package: kmod-mt76x2e
+Menu: 1
+Submenu: Drivers
+Version: <LINUX_VERSION>+p4rev-113843-
+Depends: +kmod-cfg80211
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: MTK Properties
+Title: MTK MT76x2e wifi AP driver
+Maintainer: 
+Source: mt76x2e-p4rev-113843.tar.bz2
+Type: ipkg
+Description: MTK MT76x2e wifi AP driver
+
+@@
+Config:
+	source "package/ramips/drivers/mt76x2e/config.in"
+@@
+
+
