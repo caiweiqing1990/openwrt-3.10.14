@@ -1,11 +1,5 @@
 # openwrt-3.10.14
 
-git add . -A 
-
-git commit -m "first commit"
-
-git push -u origin master
-
 sudo apt-get install libncurses5-dev zlib1g-dev gawk flex patch git-core g++ subversion //安装编译依赖
 
 ./scripts/feeds update -a  //更新软件包
@@ -33,6 +27,30 @@ obj-m   += snd-compress.o
 
 cd staging_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/usr/lib/libiconv-full
 cp include/iconv.h  ../../include/
-cp lib/lib*  ../../lib/ -frd
+cp lib/libiconv.a  ../../lib/ -frd
+
+主要不用复制 libiconv.so*
+
+PPTP问题
+修改 build_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/linux-ramips_mt7620/linux-kernel/drivers/net/ppp/Kconfig +133
+
+config PPTP
+#config PPPOPPTP
+
+生成固件目录
+
+bin/ramips/openwrt-ramips-mt7620-mt7620-squashfs-sysupgrade.bin
+
+
+
+
+git add . -A 
+
+git commit -m "first commit"
+
+git push -u origin master
+
+
+
 
 
