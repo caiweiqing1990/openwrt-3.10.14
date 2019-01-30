@@ -1,6 +1,6 @@
 # openwrt-3.10.14
 
-git add *
+git add . -A 
 
 git commit -m "first commit"
 
@@ -19,4 +19,20 @@ make menuconfig 	   //配置软件包
 make kernel_menuconfig	   //配置kernel
 
 make V=s   		   //编译
+
+
+可能出现错误
+===============================================================================
+一、ERROR: module 'build_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/linux-ramips_mt7620/linux-3.10.14-p112871/sound/core/snd-compress.ko' is missing.
+
+修改build_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/linux-ramips_mt7620/linux-kernel/sound/core/Makefile 文件
+#obj-$(CONFIG_SND_COMPRESS_OFFLOAD)     += snd-compress.o
+obj-m   += snd-compress.o
+
+二、fatal error: iconv.h: No such file or directory
+
+cd staging_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/usr/lib/libiconv-full
+cp include/iconv.h  ../../include/
+cp lib/lib*  ../../lib/ -frd
+
 
