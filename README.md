@@ -1,11 +1,13 @@
 # openwrt-3.10.14
 
-git init
-git add * -fA
+git add *
+
 git add README.md
+
 git commit -m "first commit"
-git remote add origin https://github.com/caiweiqing1990/openwrt-3.10.14.git
+
 git push -u origin master
+
 
 sudo apt-get install libncurses5-dev zlib1g-dev gawk flex patch git-core g++ subversion
 
