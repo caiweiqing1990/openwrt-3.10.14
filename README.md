@@ -32,7 +32,7 @@ cp include/iconv.h  ../../include/
 
 cp lib/libiconv.a  ../../lib/ -frd
 
-主要不用复制 libiconv.so*
+不用复制 libiconv.so*
 
 PPTP问题
 
